@@ -11,7 +11,7 @@
 
     <modules>
         <module>admin</module>
-        <module>student</module>
+        <module>students</module>
     </modules>
 
     <properties>
