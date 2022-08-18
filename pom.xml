@@ -12,6 +12,7 @@
     <modules>
         <module>admin</module>
         <module>students</module>
+        <module>domain</module>
     </modules>
 
     <properties>
