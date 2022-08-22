@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body style="background-color: aliceblue;" th:fragment="assignmentDeatail">
+<div id="header" class=""></div>
+<section>
+    <div class="container py-3">
+        <div class="row mb-3 ">
+            <div class="col mb-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="container">
+                            <h4 class="text-muted text-center mb-4 h3"><i class="fas fa-file-alt me-2"></i> Assignment Details</h4>
+                            <form action="">
+                                <div class="row mb-2">
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="stuName">Student Name</label>
+                                        <input type="text" name="stuName" id="stuName"
+                                               class="form-control form-control-sm mt-2">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="date">Assignment Title</label>
+                                        <input type="text" name="date" id="date"
+                                               class="form-control form-control-sm mt-2">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="date">Subbmitted Date</label>
+                                        <input type="datetime-local" name="datetime" id="datetime"
+                                               class="form-control form-control-sm mt-2">
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="mark">Status</label>
+                                        <select class="form-select me-2" aria-label="Disabled select example">
+                                            <option value="1">Marked</option>
+                                            <option value="2">Handed in</option>
+                                            <option value="3">Assigned</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 form-group mb-3">
+                                        <label for="mark">Mark</label>
+                                        <input type="number" name="mark" id="mark"
+                                               class="form-control form-control-sm mt-2">
+                                    </div>
+
+
+                                    <div class="mt-2 border border-1 p-4 mb-4" style="border-radius:  10px;">
+                                        <div class="wrapper">
+                                            <div class="container">
+                                                <div class="upload-container">
+                                                    <div class="border-container">
+                                                        <div class="icons fa-4x">
+                                                            <i class="fas fa-file-image" data-fa-transform="shrink-3 down-2 left-6 rotate--45"></i>
+                                                            <i class="fas fa-file-alt" data-fa-transform="shrink-2 up-4"></i>
+                                                            <i class="fas fa-file-pdf" data-fa-transform="shrink-3 down-2 right-6 rotate-45"></i>
+                                                        </div>
+                                                        <input type="file" id="file-upload">
+                                                        <p>Drag and drop files here, or
+                                                            <a href="#" id="file-browser">browse</a> your computer.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="d-flex justify-content-end mb-2">
+                                    <button type="submit" class="btn btn-outline-success me-2">Submit</button>
+                                    <a href="teacher-batchdetail.html" class="btn btn-outline-primary">Back</a>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<script>
+    $("#file-upload").css("opacity", "0");
+    $("#file-browser").click(function(e) {
+        e.preventDefault();
+        $("#file-upload").trigger("click");
+    });
+</script>
+</body>
+</html>

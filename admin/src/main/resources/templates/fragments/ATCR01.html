@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body style="margin-top: 100px; background-color: rgba(35, 209, 222, 0.2);" th:fragment="attendanceCreate">
+
+<div class="container bg-light shadow p-3 mt-5">
+  <div class="mb-3">
+    <h3 class="text-decoration-none text-center">
+      All Attendance List
+    </h3>
+  </div>
+  <div class="add-schedule d-flex justify-content-between mb-2">
+    <div>
+      <input type="date">
+    </div>
+    <div class="d-flex text-align-center">
+        <span class="me-2">
+          <select class="form-select " aria-label="Disabled select example">
+            <option selected disabled>Select Batch</option>
+            <option value="1">OJT Batch 1</option>
+            <option value="2">JWD Batch 3</option>
+            <option value="3">FDC Batch 5</option>
+          </select>
+        </span>
+      <button class="btn btn-danger text-light me-2">View Batch</button>
+      <button type="button" class="btn btn-primary">Export<i
+              class="fas fa-file-export ms-2"></i></button>
+    </div>
+  </div>
+  <hr>
+  <div class="table">
+    <table id="datatable" class="table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th scope="col">Student ID</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Attendance Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr style="vertical-align: middle">
+        <td>1</td>
+        <td>STU001</td>
+        <td>Mg Mg</td>
+        <td>
+          <input type="radio" name="choose" id="1" class="form-check-input" /><label
+                for="1" class="ms-2">Present</label>
+          <input type="radio" name="choose" id="2" class="form-check-input" /><label
+                for="2" class="ms-2">Absent</label>
+          <input type="radio" name="choose" id="3" class="form-check-input" /><label
+                for="3" class="ms-2">Leave</label>
+        </td>
+      </tr>
+      <tr style="vertical-align: middle">
+        <td>2</td>
+        <td>STU002</td>
+        <td>Tun Tun</td>
+        <td>
+          <input type="radio" name="choose" id="1" class="form-check-input" /><label
+                for="1" class="ms-2">Present</label>
+          <input type="radio" name="choose" id="2" class="form-check-input" /><label
+                for="2" class="ms-2">Absent</label>
+          <input type="radio" name="choose" id="3" class="form-check-input" /><label
+                for="3" class="ms-2">Leave</label>
+        </td>
+      </tr>
+      <tr style="vertical-align: middle">
+        <td>3</td>
+        <td>STU003</td>
+        <td>Mary</td>
+        <td>
+          <input type="radio" name="choose" id="1" class="form-check-input" /><label
+                for="1" class="ms-2">Present</label>
+          <input type="radio" name="choose" id="2" class="form-check-input" /><label
+                for="2" class="ms-2">Absent</label>
+          <input type="radio" name="choose" id="3" class="form-check-input" /><label
+                for="3" class="ms-2">Leave</label>
+        </td>
+      </tr>
+      <tr style="vertical-align: middle">
+        <td>4</td>
+        <td>STU004</td>
+        <td>Michel</td>
+        <td>
+          <input type="radio" name="choose" id="1" class="form-check-input" /><label
+                for="1" class="ms-2">Present</label>
+          <input type="radio" name="choose" id="2" class="form-check-input" /><label
+                for="2" class="ms-2">Absent</label>
+          <input type="radio" name="choose" id="3" class="form-check-input" /><label
+                for="3" class="ms-2">Leave</label>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('#datatable').DataTable();
+  });
+</script>
+</body>
+</html>
